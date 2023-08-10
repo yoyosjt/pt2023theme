@@ -1,0 +1,119 @@
+#mob-nav {
+    display: none;
+    @include respond(tab-port) {
+        display: flex;
+    }
+}
+
+.site-header,
+.header-one-wrapper,
+.header-two-wrapper,
+.footer,
+.footer-one-wrapper,
+.footer-two-wrapper { 
+    max-width: 100%;
+}
+
+.site-header {
+    position: fixed;
+}
+
+.header-one-wrapper {
+    background-image: linear-gradient(-45deg, var(--blue-dark-1), var(--blue-dark-2));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-two-wrapper {
+    background-color: var(--blue-cyan);
+}
+
+.header-one__ad,
+nav.icons-nav,
+.header-two-wrapper,
+aside#left-sidebar {
+    @include respond(tab-port) {
+        display: none !important;
+    }
+}
+
+.header-one,
+.header-two,
+.site-mid-container,
+.footer-one,
+.footer-two {
+    max-width: var(--middle-max-width);
+    margin: 0rem auto;
+}
+
+.top-page-spacer {
+    height: 12.5rem;
+
+    @include respond(tab-port) {
+        height: 8.5rem;
+    }
+}
+
+.site-mid-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    column-gap: 1.5rem;
+    //background-color: darkgoldenrod;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include respond(tab-port) {
+        flex-flow: column wrap;
+        row-gap: 3.5rem;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+aside#left-sidebar {
+    background-color: lightblue;
+    min-height: 80vh;
+    width: 15%;
+
+    @include respond(tab-land) {
+        display: none;
+    }
+}
+
+main {
+    background-color: var(--white-full);
+    min-height: 80vh;
+    //max-width: 55%;
+    width: 50%;
+
+    @include respond(tab-land) {
+        width: 68%;
+    }
+
+    @include respond(tab-port) {
+        flex-flow: column wrap;
+        width: 100%;
+    }
+}
+
+aside#right-sidebar {
+    background-color: var(--gray-light-2);
+    min-height: 80vh;
+    width: 33%;
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+}
+
+
+
+.footer-one-wrapper {
+    background-color: var(--blue-dark-1);
+}
+
+.footer-two-wrapper {
+    background-color: var(--blue-dark-2);
+}

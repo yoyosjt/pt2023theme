@@ -1,0 +1,99 @@
+/*** COLORS variables 
+Use CSS custom properties instead of variables
+/*** put css variables inside :root ***/
+:root {
+    --blue-cyan-light: #e1f3fa;
+    --blue-cyan: #1dbefc;
+    --blue-dark-1: #094c8c;
+    --blue-dark-2: #04315c;
+
+    --red-1: #cf1a1a;
+    --red-2: #ff0000;
+    --red-3: #ba0000;
+
+    --white-full: #fff;
+    --gray-light-1: #f1f1f1;
+    --gray-light-2: #d5d5d5;
+    --gray-light-3: #8d8d8d;
+    --gray-dark-1: #666;
+    --gray-dark-2: #3f3f3f;
+    --gray-dark-3: #2f2f2f;
+    --black-1: #151515;
+
+    --smallest-font-size: 1.3rem;
+
+    --shadow-dark: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    --middle-max-width: 114rem;
+
+    --post-title-font-size: clamp( 1.3rem, 2.4rem, 2.8rem );
+    --post-content-font-size: clamp( 1rem, 1.6rem, 2.2rem );
+
+    --cat-title-font-size: clamp( 1rem, 1.5rem, 2rem );
+    --sidebar-title-font-size: clamp( 1rem, 1.7rem, 2.2rem );
+    --sidebar-excerpt-font-size: clamp( 1rem, 1.5rem, 2.2rem );
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    
+    font-size: 62.5%;  // 1 rem = 10px
+
+    //default 1200px to 1880px
+
+    //https://www.youtube.com/watch?v=4VUfk464vzk
+
+    /*@include respond(tab-land) { // width 900 - 1200
+        font-size: 56.25%; // 1 rem = 9px  9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 900
+        font-size: 50%; // 1 rem = 8px  8/16 = 50%   
+    }
+
+    @include respond(phone) { // width < 600
+        font-size: 43.75%; // 1 rem = 7px  7/16 = 43.75%  
+
+    }
+
+    @include respond(big-desktop) { // width > 1880
+        font-size: 75%; // 1 rem = 12px  12/16 = 75% 
+    }*/
+
+}
+
+body {
+    color: var(--gray-dark-2);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    background-color: var(--blue-cyan-light);
+    min-height: 100vh;
+
+    @include respond(big-desktop) {
+        //background-color: rgb(34, 227, 53);
+    }
+
+    @include respond(tab-land) {
+        //background-color: #cf1a1a;
+    }
+
+    @include respond(tab-port) {
+        //background-color: yellow;
+    }
+
+    @include respond(phone) {
+       // background-color: #c81dfc;
+    }
+   
+}

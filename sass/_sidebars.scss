@@ -1,0 +1,120 @@
+
+.sidebars {
+    //background-color: #fefefe;
+}
+
+.sidebars .category-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--cat-title-font-size);
+    font-weight: 700;
+    padding: 10px 12px;
+    letter-spacing: 1.2px;
+    margin-top: 0;
+    background-color: var(--blue-cyan);
+    color: var(--white-full);
+    border-radius: 3px 3px 0px 0px;
+}
+
+ul.post-looper {
+    background-color: #fefefe;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.post-looper li {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+ul.post-looper a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+ul.post-looper .thumbnail-wrapper {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+ul.post-looper img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all .3s ease-in-out;
+}
+
+//hovers
+ul.post-looper a:hover img {
+    scale: 110%;
+    rotate: -1deg;
+    transition: all .3s ease-in-out;
+}
+
+ul.post-looper a:hover h4 {
+    color: var(--red-1);
+    transition: all .2s;
+}
+
+ul.post-looper a:hover p {
+    color: var(--black-1);
+    transition: all .2s;
+}
+
+ul.post-looper .title-wrapper {
+    padding: 15px;
+}
+
+ul.post-looper h4 {
+    //font-size: 1.4rem;
+    font-weight: 600;
+    font-size: var(--sidebar-title-font-size);
+    line-height: 1.25;
+    color: var(--red-3);
+    margin-bottom: 1rem;
+    transition: all .2s;
+}
+
+ul.post-looper p {
+    font-size: var(--sidebar-excerpt-font-size);
+    line-height: 1.3;
+    color: var(--gray-dark-2);
+    transition: all .2s;
+}
+
+
+#right-sidebar ul.post-looper {
+    padding: 15px;
+}
+
+#right-sidebar ul.post-looper li a{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+#right-sidebar .thumbnail-wrapper {
+    width: 30%;
+    height: 90px;
+
+    @include respond(tab-port) {
+        height: 140px;
+    }
+
+    @include respond(phone) {
+        height: 110px;
+        //height: max(10vh, 1);
+    }
+}
+
+#right-sidebar .title-wrapper {
+    width: 67%;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#right-sidebar ul.post-looper a:hover img {
+    scale: 112%;
+}

@@ -1,0 +1,124 @@
+.article-post .wp-block-image img{
+    cursor: pointer;
+}
+
+
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: var(--blue-cyan-light);
+    max-width: 1000px;
+    width: 100%;
+    //max-height: 10vh;
+    //height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  .preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  .preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px 8px 15px;
+    justify-content: space-between;
+  }
+  .preview-box .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .details .title p{
+    margin: 0;
+  }
+  .details .title p.current-img{
+    font-weight: 500;
+  }
+  .details .icon{
+    color: var(--blue-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    transition: all .2 ease-in;
+    
+  }
+
+  .details .icon:hover {
+    color: var(--red-1);
+  }
+
+  .preview-box .image-box{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    position: relative;
+  }
+  .image-box .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blue-cyan);
+    font-size: 6rem;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+  }
+
+  .slide.prev{
+    left: 0;
+  }  
+  .slide.prev::after {
+    content: '\2039';
+    padding-bottom: 6px;
+  }
+
+  .slide.next{
+    right: 0;
+  }
+  .slide.next::after {
+    content: '\203a';
+    padding-bottom: 6px;
+  }
+  .slide.prev:hover,
+  .slide.next:hover {
+    top: 49%;
+  }
+
+  .image-box img{
+    width: 100%;
+    //height: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+
+  .image-box .caption {
+    display: block;
+    font-size: 1.4rem;
+    padding: .5rem 1.5rem;
+  }
+
+  .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.85);
+  }
+  
+  

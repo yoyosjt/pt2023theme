@@ -1,0 +1,136 @@
+.footer a {
+    transition: all .2s ease-in-out;
+}
+
+.footer-one {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 7rem 3rem;
+    gap: 2rem;
+    color: var(--gray-light-2);
+    width: 100%;
+    //border: 1px solid red;
+
+    @include respond(tab-port) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5rem 2rem;
+        gap: 4rem;
+    }
+}
+
+
+.footer-one .about-us {
+    //background-color: bisque;
+    width: 27%;
+
+    & a.pt-logo{
+        width: 100%;
+        display: block;
+    }
+
+    & a img {
+        width: 100%;
+
+        @include respond(tab-port) {
+            width: 40%;
+            //border: 2px dotted hotpink;
+        }
+
+        @include respond(phone) {
+            width: 70%;
+            //border: 2px dotted gold;
+        }
+    }
+
+    & p {
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 5px 10px 20px;
+    }
+
+    & .icons-nav {
+        //background-color: black;
+        justify-content: center;
+
+        & a {
+            padding: 2rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+}
+
+.footer-one .quick-links {
+    width: 60%;
+    //background-color: mediumpurple;
+
+    @include respond(phone) {
+        width: 80%;
+    }
+}
+
+
+.footer-titles {
+    margin: 0rem 0rem 3rem 1.5rem;
+    text-transform: uppercase;
+    color: var(--gray-light-2);
+
+    @include respond(tab-port) {
+        margin: 5rem 2rem 3rem;
+    }
+}
+
+
+.footer-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 2rem;
+    color: var(--gray-light-3);
+
+    @include respond(tab-port) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .menu-item {
+        list-style: none;
+    }
+
+    & a:link,
+    & a:visited {
+        text-decoration: none;
+        font-size: 1.9rem;
+        color: var(--gray-light-2);
+        padding: .8rem 1.5rem;
+    }
+
+    & a:hover{
+        color: var(--gray-light-1);
+    }
+}
+
+
+.footer-two-wrapper{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray-light-3);
+    padding: 2rem;
+
+    & a:link,
+    & a:visited {
+        color: var(--gray-light-3);
+        text-decoration: none;
+    }
+
+    & a:hover {
+        color: var(--gray-light-1);
+    }
+}
